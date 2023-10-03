@@ -20,11 +20,11 @@ export default function App (){
       {advice.advice}
     </h5>
     <br />
-    <img className="divider" />
+    <img alt='divider' className="divider" />
     <br />
   </div>
   <div className="dicediv" onClick={()=>{getData()}}>
-   <img src='/images/icon-dice.svg' className='dice' />
+   <img alt='dice' src='/images/icon-dice.svg' className='dice' />
    </div>
   </>
 }
