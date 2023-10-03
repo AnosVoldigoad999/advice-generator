@@ -1,42 +1,86 @@
-#root {
-  max-width: 1280px;
+*{
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+@font-face{
+  font-family: man;
+  src: url(../public/font/Manrope-VariableFont_wght.ttf)
+}
+
+
+body{
+  font-family: man;
+  background-color:  hsl(218, 23%, 16%);
+}
+
+.container{
   margin: 0 auto;
-  padding: 2rem;
+  margin-top: 25vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  width: fit-content;
+  /*width: 30%;
+ min-width: 350px;
+ max-width: 400px; */
+ height: fit-content;
+ background-color: hsl(217, 19%, 24%) ;
+}
+
+.divider{
+  content: url(../public/images/pattern-divider-desktop.svg);
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+p{
+  margin: 30px 0;
+  font-size: 0.8rem;
+  color: hsl(150, 100%, 66%);
+}
+
+h5{
+  color: hsl(193, 38%, 86%);
+  width: 70%;
   text-align: center;
+  font-size: 0.8rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.dicediv{
+  margin: 0 auto;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 30px;
+  background-color:  hsl(150, 100%, 66%);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.dice{
+  height: 25px;
+  width: 25px;
+}
+
+ 
+/*active*/
+
+.dicediv:hover{
+  cursor: pointer;
+  box-shadow: 0 0 20px hsl(150, 100%, 66%);
+}
+
+/*active*/
+
+
+@media (max-width:600px){
+  .container{
+    min-width: 100px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

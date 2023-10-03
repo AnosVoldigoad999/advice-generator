@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+export default function App (){
+  const [advice, setAdvice] = useState()
+  const getData = async ()=>{
+    await axios.get('https://api.adviceslip.com/advice').then(response=>{setAdvice(response.data.slip)})
+  }
 
-function App() {
-  const [count, setCount] = useState(0)
+  useEffect(()=>{
+    getData()
+  }, [])
+ 
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+  return<>
+  <div className="container">
+    <p>Advice #{advice.id}</p>
+    <h5>
+      {advice.advice}
+    </h5>
+    <br />
+    <img className="divider" />
+    <br />
+  </div>
+  <div className="dicediv" onClick={()=>{getData()}}>
+   <img src='../public/images/icon-dice.svg' className='dice' />
+   </div>
+  </>
 }
-
-export default App
