@@ -24,7 +24,7 @@ export default function App (){
     <br />
   </div>
   <div className="dicediv" onClick={()=>{getData()}}>
-   <img src='../public/images/icon-dice.svg' className='dice' />
+   <img src='/images/icon-dice.svg' className='dice' />
    </div>
   </>
 }
