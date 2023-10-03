@@ -22,9 +22,7 @@ body{
   flex-direction: column;
   border-radius: 15px;
   width: fit-content;
-  /*width: 30%;
- min-width: 350px;
- max-width: 400px; */
+ max-width: 400px; 
  height: fit-content;
  background-color: hsl(217, 19%, 24%) ;
 }
