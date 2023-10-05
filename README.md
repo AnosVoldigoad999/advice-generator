@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/advice-generator-app-solution-lhIArlwGjQ](https://www.frontendmentor.io/solutions/advice-generator-app-solution-lhIArlwGjQ)
 - Live Site URL: [https://advice-generator-three-alpha.vercel.app/](https://advice-generator-three-alpha.vercel.app/)
 
 ## My process
