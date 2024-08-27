@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 export default function App (){
   const [advice, setAdvice] = useState({advice:"", id:""})
-  const getData = async ()=>{
-    await axios.get('https://api.adviceslip.com/advice').then(response=>{setAdvice(response.data.slip)})
+  const getData =  ()=>{
+     axios.get('https://api.adviceslip.com/advice').then(response=>{setAdvice(response.data.slip)})
   }
 
   useEffect(()=>{
